@@ -29,11 +29,11 @@ class CambridgeDictionary
   end
 
   def definition(page)
-    page.css('.def').map(&:text)
+    page.css('.def').map(&:text).first
   end
 
   def example(page)
-    page.css('.examp').map(&:text)
+    page.css('.examp').map(&:text).first
   end
 
   def word(page)
